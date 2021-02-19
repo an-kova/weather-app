@@ -7,12 +7,14 @@ Basic Weather Forecast App in Vanilla JS
 ```shell
 npm install
 ```
+For build and dev server:
 ```shell
 npm start
-``` for build and dev server
+```
+For development build:
 ```shell
-npm run build:dev
-``` for development build
-```shell
+npm run build
+```
+<!-- ```shell
 npm run build:prod
-``` for production build
+``` for production build -->
