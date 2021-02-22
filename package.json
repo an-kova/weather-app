@@ -52,5 +52,8 @@
   "lint-staged": {
     "*.js": "eslint --cache --fix",
     "*.{js,md,yml,html,css}": "prettier --write"
+  },
+  "dependencies": {
+    "bootstrap": "^4.6.0"
   }
 }
