@@ -4,30 +4,84 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Weather Forecast</title>
-    <meta name="description" content="Weather forecast app" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- <link rel="stylesheet" href="/style.css" /> -->
-  </head>
 
-  <body>
-    <!--[if lt IE 7]>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Weather Forecast</title>
+  <meta name="description" content="Weather forecast app" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- <link rel="stylesheet" href="/style.css" /> -->
+</head>
+
+<body>
+  <!--[if lt IE 7]>
       <p class="browsehappy">
         You are using an <strong>outdated</strong> browser. Please
         <a href="#">upgrade your browser</a> to improve your experience.
       </p>
     <![endif]-->
 
-    <h1>
+  <main class="container">
+
+    <h1 class="display-3 my-3">
       Weather Forecast for
-      <span id="city-current"> your city </span>
+      <span id="city-current"> Tomsk </span>
     </h1>
 
-    <p id="status" role="status"></p>
+    <div id="weather-current" class="container">
+      <div class="row align-items-center">
+        <div class="col-2 col-8-sm justify-content-start">
+          <p>
+            <img alt="Snow" src="http://openweathermap.org/img/wn/13d@2x.png" />
+            <span class="text-secondary">Snow</span>
+          </p>
+        </div>
+        <div class="col-2 col-8-sm justify-content-start">
 
-    <script src="src/index.js"></script>
-  </body>
+          <p>Temperature: -19 C</p>
+          <p class="text-muted">
+            <small>Feels like: -22 C</small>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <p id="status" role="status" class="mb-3 alert alert-info"></p>
+
+    <div class="mb-3">
+      <form class="row">
+        <div class="col-12">
+          <label for="input-city" class="form-label">
+            Enter city name, ZIP code, or coordinates:
+          </label>
+        </div>
+        <div class="input-group mb-3 col-md-6">
+          <input type="text" if="input-city" class="form-control" placeholder="i.e. New York or 20001" />
+          <input type="submit" class="btn btn-primary" value="Get the weather" />
+        </div>
+      </form>
+    </div>
+
+    <div id="history">
+      <h2 class="h3">Recently checked cities:</h2>
+
+      <ol class="list-group">
+        <li class="list-group-item list-group-item-action">
+          <a href="#">
+            Washington, DC
+            Show
+            <span class="sr-only">
+              weather
+            </span>
+          </a>
+        </li>
+      </ol>
+    </div>
+
+  </main>
+
+  <script src="src/index.js"></script>
+</body>
+
 </html>

@@ -26,14 +26,15 @@ export function getCurrentLocation() {
   }
 
   function error(err) {
-    status.textContent = "Unable to retrieve your location";
+    status.textContent = "Oops, we were unable to find you. But you can still enter your location below";
     console.warn(`ERROR(${err.code}): ${err.message}`);
   }
 
   if (!navigator.geolocation) {
     status.textContent = "Geolocation is not supported by your browser";
   } else {
-    status.textContent = "Locating…";
+    status.innerHTML = `<span class="spinner-border text-primary mr-3 mt-1"></span>
+    Trying to locate you…`;
     navigator.geolocation.getCurrentPosition(success, error, options);
   }
 
