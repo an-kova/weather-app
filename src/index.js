@@ -1,4 +1,5 @@
 import { getCurrentLocation } from "./geolocation";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export function showCurrentCoordinates(location) {
   const currentUserCoordinates = getCurrentLocation.coordinates;
